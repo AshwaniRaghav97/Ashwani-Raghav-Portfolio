@@ -9,12 +9,14 @@ import Footer from "./components/Footer";
 import CodingProfiles from "./components/CodingProfiles";
 import Achievements from "./components/Achievements";
 import Education from "./components/Education";
+import TechMarquee from "./components/TechMarquee";
 
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
+      <TechMarquee />
       <About />
       <Skills />
       <Projects />
