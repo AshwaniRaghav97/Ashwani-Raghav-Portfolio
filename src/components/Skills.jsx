@@ -3,12 +3,12 @@ import {
   FaReact,
   FaNodeJs,
   FaGitAlt,
+  FaHtml5,
+  FaCss3Alt,
 } from "react-icons/fa";
 
 import {
   SiJavascript,
-  SiHtml5,
-  SiCss3,
   SiBootstrap,
   SiMongodb,
   SiMysql,
@@ -22,11 +22,11 @@ const skills = [
   { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-400" },
   { name: "React", icon: <FaReact />, color: "text-cyan-400" },
   { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
-  { name: "Express", icon: <SiExpress />, color: "text-gray-300" },
-  { name: "MongoDB", icon: <SiMongodb />, color: "text-green-400" },
+  { name: "Express.js", icon: <SiExpress />, color: "text-gray-300" },
+  { name: "MongoDB", icon: <SiMongodb />, color: "text-green-500" },
   { name: "MySQL", icon: <SiMysql />, color: "text-blue-500" },
-  { name: "HTML5", icon: <SiHtml5 />, color: "text-orange-600" },
-  { name: "CSS3", icon: <SiCss3 />, color: "text-blue-400" },
+  { name: "HTML5", icon: <FaHtml5 />, color: "text-orange-600" },
+  { name: "CSS3", icon: <FaCss3Alt />, color: "text-blue-500" },
   { name: "Bootstrap", icon: <SiBootstrap />, color: "text-purple-500" },
   { name: "Git", icon: <FaGitAlt />, color: "text-red-500" },
 ];
@@ -46,13 +46,12 @@ export default function Skills() {
         My <span className="text-cyan-400">Skills</span>
       </motion.h2>
 
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-16">
-
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-16">
         {skills.map((skill) => (
           <motion.div
             key={skill.name}
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 text-center transition-all"
+            whileHover={{ scale: 1.05, y: -5 }}
+            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 text-center"
           >
             <div className={`text-6xl ${skill.color}`}>
               {skill.icon}
@@ -63,7 +62,6 @@ export default function Skills() {
             </h3>
           </motion.div>
         ))}
-
       </div>
     </section>
   );
