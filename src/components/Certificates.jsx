@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import certificates from "../data/certificates";
+import CertificateModal from "./CertificateModal";
 
 function Certificates() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <section
       id="certificates"
@@ -22,18 +26,16 @@ function Certificates() {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
         {certificates.map((certificate) => (
-          <motion.a
+          <motion.div
             key={certificate.id}
-            href={certificate.image}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.04 }}
-            className="overflow-hidden rounded-2xl bg-white/5 border border-white/10"
+            whileHover={{ scale: 1.05 }}
+            className="overflow-hidden rounded-2xl bg-white/5 border border-white/10 cursor-pointer"
+            onClick={() => setSelectedImage(certificate.image)}
           >
             <img
               src={certificate.image}
               alt={certificate.title}
-              className="w-full h-56 object-cover"
+              className="w-full h-56 object-cover transition duration-500 hover:scale-110"
             />
 
             <div className="p-5">
@@ -41,9 +43,14 @@ function Certificates() {
                 {certificate.title}
               </h3>
             </div>
-          </motion.a>
+          </motion.div>
         ))}
       </div>
+
+      <CertificateModal
+        image={selectedImage}
+        onClose={() => setSelectedImage(null)}
+      />
     </section>
   );
 }

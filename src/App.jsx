@@ -12,6 +12,7 @@ import Education from "./components/Education";
 import TechMarquee from "./components/TechMarquee";
 import ScrollProgress from "./components/ScrollProgress";
 import Stats from "./components/Stats";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <Education />
       <Contact />
       <Footer />
+      <ScrollToTop />
       
     </>
   );

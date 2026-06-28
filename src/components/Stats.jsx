@@ -1,26 +1,20 @@
-import CountUp from "react-countup";
 import { motion } from "framer-motion";
 
 const stats = [
   {
-    number: 350,
-    suffix: "+",
+    number: "350+",
     title: "LeetCode Problems",
   },
   {
-    number: 2,
-    suffix: "+",
+    number: "2+",
     title: "Full Stack Projects",
   },
   {
-    number: 7.1,
-    suffix: "",
-    decimals: 1,
+    number: "7.1",
     title: "Current CGPA",
   },
   {
-    number: 2027,
-    suffix: "",
+    number: "2027",
     title: "Graduation Year",
   },
 ];
@@ -33,15 +27,11 @@ export default function Stats() {
           <motion.div
             key={item.title}
             whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
             className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 text-center"
           >
             <h2 className="text-5xl font-bold text-cyan-400">
-              <CountUp
-                end={item.number}
-                duration={2}
-                decimals={item.decimals || 0}
-              />
-              {item.suffix}
+              {item.number}
             </h2>
 
             <p className="mt-4 text-gray-300 text-lg">
