@@ -1,5 +1,3 @@
-import Marquee from "react-fast-marquee";
-
 const tech = [
   "Java",
   "Spring Boot",
@@ -21,17 +19,17 @@ const tech = [
 
 export default function TechMarquee() {
   return (
-    <div className="py-6 border-y border-white/10 bg-white/5 backdrop-blur-lg">
-      <Marquee speed={60} gradient={false}>
-        {tech.map((item, index) => (
-          <div
+    <section className="overflow-hidden py-6 border-y border-white/10 bg-white/5">
+      <div className="flex whitespace-nowrap animate-marquee">
+        {[...tech, ...tech].map((item, index) => (
+          <span
             key={index}
-            className="mx-6 px-6 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 font-semibold"
+            className="mx-4 px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 font-semibold"
           >
             {item}
-          </div>
+          </span>
         ))}
-      </Marquee>
-    </div>
+      </div>
+    </section>
   );
 }

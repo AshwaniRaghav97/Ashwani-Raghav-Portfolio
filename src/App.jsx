@@ -10,12 +10,16 @@ import CodingProfiles from "./components/CodingProfiles";
 import Achievements from "./components/Achievements";
 import Education from "./components/Education";
 import TechMarquee from "./components/TechMarquee";
+import ScrollProgress from "./components/ScrollProgress";
+import Stats from "./components/Stats";
 
 function App() {
   return (
     <>
+    <ScrollProgress />
       <Navbar />
       <Hero />
+      <Stats />
       <TechMarquee />
       <About />
       <Skills />
