@@ -27,5 +27,5 @@ export const portfolio = {
 
   resume: "/resume.pdf",
 
-  profile: "/profile.png"
+  profile: "/profile.png.jpg"
 }
