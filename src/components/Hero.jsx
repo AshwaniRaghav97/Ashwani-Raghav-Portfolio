@@ -36,7 +36,7 @@ function Hero() {
                 1800,
                 "Java Developer",
                 1800,
-                "DSSA Enthusiast",
+                "DSA Enthusiast",
                 1800,
                 "Problem Solver",
                 1800,
