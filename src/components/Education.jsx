@@ -8,15 +8,15 @@ const education = [
     score: "CGPA : 7.1"
   },
   {
-    year: "2022",
+    year: "2023",
     title: "Class 12",
-    place: "UP Board",
+    place: "CBSC Board",
     score: "56%"
   },
   {
-    year: "2020",
+    year: "2021",
     title: "Class 10",
-    place: "UP Board",
+    place: "CBSC Board",
     score: "62%"
   }
 ];
